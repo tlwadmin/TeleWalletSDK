@@ -9,8 +9,7 @@ class TeleWallet {
 		$this->accnumber=$accnumber;
 	}
 	protected function sendRequest($obj,$url) {		
-		$obj['accnumber']=$this->accnumber;
-		file_put_contents("sendpost.log",json_encode($obj,JSON_UNESCAPED_UNICODE)."\n url=$url");
+		$obj['accnumber']=$this->accnumber;		
 		$postdata = http_build_query($obj);
 		$opts = array('http' =>
 			array(
