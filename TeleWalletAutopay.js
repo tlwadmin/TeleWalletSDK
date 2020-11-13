@@ -1,5 +1,6 @@
 const querystring = require('querystring');
 const http = require('http');
+const sha1=require('sha1');
 
 module.exports = function(apikey,accnumber) { //TeleWallet
 	const domen = 'api.telewallet.ru';
